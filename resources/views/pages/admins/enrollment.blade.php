@@ -35,6 +35,23 @@
         searchBtn.onclick = function(){
             sidebar.classList.toggle("active");
         }
+
+        $(".level").change(function() {
+            if ($(this).val() == "11" || $(this).val() == "12") {
+                $('#SeniorHigh-details').show();
+                $('.track').attr('required', '');
+                $('.track').attr('data-error', 'This field is required.');
+                $('.strand').attr('required', '');
+                $('.strand').attr('data-error', 'This field is required.');
+            } else {
+                $('#SeniorHigh-details').hide();
+                $('.track').removeAttr('required');
+                $('.track').removeAttr('data-error');
+                $('.strand').removeAttr('required');
+                $('.strand').removeAttr('data-error');
+            }
+        });
+        $(".level").trigger("change");
     </script>
 
 </div>

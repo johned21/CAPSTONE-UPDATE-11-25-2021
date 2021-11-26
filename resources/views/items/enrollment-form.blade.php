@@ -10,16 +10,17 @@
                         <div class="mb-3 form-group @error('level') has-error @enderror">
                             {!! Form::label('level','Level',[],false) !!}
                             {{Form::select('level', [
-                                1 => 'Grade 6',
-                                2 => 'Grade 7',
-                                3 => 'Grade 8',
-                                4 => 'Grade 9',
-                                5 => 'Grade 10',
-                                6 => 'Grade 11',
-                                7 => 'Grade 12',
-                            ], null, ['class'=>'form-control form-select', 'id'=>'modal-input-level'])}}
+                                6 => 'Grade 6',
+                                7 => 'Grade 7',
+                                8 => 'Grade 8',
+                                9 => 'Grade 9',
+                                10 => 'Grade 10',
+                                11 => 'Grade 11',
+                                12 => 'Grade 12',
+                            ], null, ['class'=>'form-control form-select level', 'id'=>'modal-input-level'])}}
                             <span class="errspan" id="errspan">{{ $errors->first('level') }}</span>
                         </div>
+                        
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3 form-group @error('student_type') has-error @enderror">
@@ -33,32 +34,32 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-3 form-group @error('track') has-error @enderror">
-                            {!! Form::label('track','Track',[],false) !!}
-                            {{Form::select('track', [
-                                1 => 'STEM',
-                                2 => 'ABM',
-                                3 => 'HUMMS',
-                                4 => 'ICT',
-                            ], null, ['class'=>'form-control form-select', 'id'=>'modal-input-track'])}}
-                            <span class="errspan" id="errspan">{{ $errors->first('track') }}</span>
+                
+                <div class="form-group" id="SeniorHigh-details">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3 form-group @error('track') has-error @enderror">
+                                {!! Form::label('track','Track',[],false) !!}
+                                {{Form::select('track', [
+                                    1 => 'ACADEMICS',
+                                ], null, ['class'=>'form-control form-select track', 'id'=>'modal-input-track'])}}
+                                <span class="errspan" id="errspan">{{ $errors->first('track') }}</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-3 form-group @error('strand') has-error @enderror">
-                            {!! Form::label('strand','Strand',[],false) !!}
-                            {{Form::select('strand', [
-                                1 => 'Medical',
-                                2 => 'ICT',
-                                3 => 'Engineering',
-                            ], null, ['class'=>'form-control form-select', 'id'=>'modal-input-strand'])}}
-                            <span class="errspan" id="errspan">{{ $errors->first('strand') }}</span>
+                        <div class="col-md-6">
+                            <div class="mb-3 form-group @error('strand') has-error @enderror">
+                                {!! Form::label('strand','Strand',[],false) !!}
+                                {{Form::select('strand', [
+                                    1 => 'ABM',
+                                    2 => 'HUMSS',
+                                    3 => 'GAS',
+                                ], null, ['class'=>'form-control form-select strand', 'id'=>'modal-input-strand'])}}
+                                <span class="errspan" id="errspan">{{ $errors->first('strand') }}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>

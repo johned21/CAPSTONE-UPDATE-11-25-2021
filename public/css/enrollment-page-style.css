@@ -52,3 +52,7 @@
     color: black;
     margin-top: -5px;
 }
+
+#details {
+    display: none;
+}

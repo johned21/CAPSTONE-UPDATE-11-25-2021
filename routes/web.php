@@ -52,6 +52,15 @@ Route::get('/SchoolYear', function () {
     return view('pages.admins.SchoolYear');
 });
 
+Route::get('/Enrollment', function () {
+    return view('pages.admins.enrollment');
+});
+
+Route::get('/payments', function () {
+    return view('pages.admins.payments');
+});
+
+
 Route::get('/EnrollSubjects', function () {
     return view('pages.admins.enroll-subjects');
 });

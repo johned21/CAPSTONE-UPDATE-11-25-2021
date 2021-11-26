@@ -12,8 +12,8 @@
                     <p class="SY">S.Y. {{ \App\Models\SchoolYear::CurrentYear() }}</p>
                 </div>
 
-                <div class="btn"> 
-                    <a href="/login" type="submit" class="btn btn-info enrol">Enroll Now</a>
+                <div class="text-center"> 
+                    <a href="/login" type="submit" class="btn btn-info ">Enroll Now</a>
                 </div>
                 
             </div>

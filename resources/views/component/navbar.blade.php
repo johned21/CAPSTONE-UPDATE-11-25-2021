@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background: #1C7947;">
     <div class="container-fluid">
-        <a class="navbar-brand">
+        <a class="navbar-brand" href="/">
             <img src="{{asset('/img/logo.png')}}" alt="" class="logo">
             <div class="name">
                 <h1>SALUS INSTITUTE OF TECHNOLOGY, INC.</h1>
