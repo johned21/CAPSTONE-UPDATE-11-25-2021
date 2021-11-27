@@ -15,7 +15,7 @@ class Level extends Model
         return $this->hasMany('App\Models\Section');
     }
 
-    public function list() {
+    public static function list() {
         $levels = Level::all();
         $list = [];
         foreach($levels as $l) {

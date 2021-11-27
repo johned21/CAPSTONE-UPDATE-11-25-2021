@@ -52,6 +52,33 @@
             }
         });
         $(".level").trigger("change");
+
+        $(document).ready(function() {
+            var i = 0;
+
+            $(".btn-success").click(function(){ 
+                if(i < 1){
+                    var html = $(".clone").html();
+                    $(".increment").after(html);
+                }
+                i++;
+                console.log(i);
+                hidebtn();
+            });
+            
+
+            $("body").on("click",".btn-danger",function(){ 
+                $(this).parents(".control-group").remove();
+                i--;
+                console.log(i);
+                hidebtn();
+            });
+            function hidebtn(){
+                if (i >= 1) {
+                    $('.btn-success').hide();
+                } else $('.btn-success').show();
+            }
+        });
     </script>
 
 </div>

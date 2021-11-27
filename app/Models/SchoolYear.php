@@ -11,7 +11,7 @@ class SchoolYear extends Model
 
     protected $guarded = [];
 
-    public function currentYear() {
+    public static function currentYear() {
         $sy = SchoolYear::where('status', 'active')->get()->first();
         return $sy->schoolYr_started . ' - ' . $sy->schoolYr_ended;
     }

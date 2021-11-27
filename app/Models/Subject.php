@@ -15,7 +15,7 @@ class Subject extends Model
         return $this->hasMany('App\Models\Session');
     }
 
-    public function list() {
+    public static function list() {
         $subjects = Subject::all();
         $list = [];
         foreach($subjects as $s) {

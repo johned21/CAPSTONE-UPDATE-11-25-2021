@@ -19,7 +19,7 @@ class Teacher extends Model
         return $this->hasMany('App\Models\Session');
     }
 
-    public function list() {
+    public static function list() {
         $teachers = Teacher::all();
         $list = [];
         foreach($teachers as $t) {

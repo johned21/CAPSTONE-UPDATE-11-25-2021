@@ -81,12 +81,28 @@
                             {!! Form::text('remarks', null, ['class'=>'form-control', 'id'=>'modal-input-contact']) !!}
                             <span class="errspan" id="errspan">{{ $errors->first('remarks') }}</span>
                         </div>
-                        <div class="uploadPhoto">
-                            <input class="photo" type="file" id="image-select" accept="image/*">
+
+
+                        <div class="doc mt-5">
+                            <h5 class="doctext">Requirements:</h5>
                         </div>
-                        <div class="submitted-docu mt-4">
-                            <h5>Document Submitted:</h5>
-                        </div>
+                        <form method="post" action="{{url('upload_data')}}" enctype="multipart/form-data">
+                            {{csrf_field()}}
+                                <div class="input-group control-group increment" >
+                                    <input type="file" name="filename[]" class="form-control">
+                                </div>
+                                <div class="clone hide">
+                                    <div class="control-group input-group" style="margin-top:10px">
+                                        <input type="file" name="filename[]" class="form-control">
+                                    </div>
+                                </div>
+
+                            <div class="input-group-btn float-end">
+                                <button class="btn btn-success" type="button"><i class="glyphicon glyphicon-plus"></i>Add</button>
+                                <button class="btn btn-danger" type="button"><i class="glyphicon glyphicon-remove"></i> Remove</button>
+                            </div>
+                            <button type="submit" class="btn btn-info" style="margin-top:12px"><i class="glyphicon glyphicon-check"></i> Submit</button>
+                        </form>
                     </div>
 
                     <div class="col-md-7">
