@@ -52,7 +52,7 @@ Route::get('/SchoolYear', function () {
     return view('pages.admins.SchoolYear');
 });
 
-Route::get('/Enrollment', function () {
+Route::get('/', function () {
     return view('pages.admins.enrollment');
 });
 
